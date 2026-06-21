@@ -1,2 +1,43 @@
 # m-sports-journal
-HTML page archive and documentation
+
+## 项目简介
+
+`m-sports-journal` 是一个用于归档和发布多个独立 HTML 页面的仓库。本仓库不针对任何特定域名或网站，仅作为静态 HTML 页面的集中存放与索引展示之用。页面内容涵盖体育相关的日常记录、观察与信息整理，适合作为个人或小团队的资料归档与分享空间。
+
+## 目录说明
+
+```
+m-sports-journal/
+├── index.html          # 仓库首页，提供页面导航与索引
+├── pages/              # 存放所有独立 HTML 页面
+│   ├── page-001.html
+│   ├── page-002.html
+│   └── ...
+├── assets/             # 静态资源（图片、样式、脚本等）
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── README.md           # 本文件
+```
+
+## 页面归档说明
+
+- 所有页面均以独立 HTML 文件形式存放于 `pages/` 目录下。
+- 每个页面均保持自包含，不依赖外部域名或第三方服务。
+- 页面命名采用 `page-三位数字.html` 的格式，便于按顺序归档与检索。
+- 首页 `index.html` 提供所有页面的链接列表，方便快速访问。
+
+## 维护说明
+
+- 新增页面时，请将 HTML 文件放入 `pages/` 目录，并在 `index.html` 中更新链接。
+- 建议每个页面在 `<head>` 中添加 `<meta charset="UTF-8">` 以支持中文显示。
+- 若页面引用 `assets/` 下的资源，请使用相对路径，例如 `../assets/css/style.css`。
+- 本仓库不涉及任何动态后端或数据库，纯静态托管即可运行。
+
+## 贡献
+
+欢迎通过 Issue 或 Pull Request 提出建议或提交新的页面。请确保页面内容合规、无恶意代码，并保持仓库结构清晰。
+
+## 许可
+
+本项目采用 MIT 许可证，详情请参见 [LICENSE](LICENSE) 文件。
