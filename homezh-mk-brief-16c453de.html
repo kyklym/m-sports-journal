@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK体育 · 简明指南与访问提示</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f6f0;
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+      color: #2e2b26;
+      line-height: 1.7;
+      padding: 2.4rem 1.6rem;
+    }
+
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fdfcf9;
+      padding: 2.8rem 2.8rem 3.2rem;
+      border-radius: 18px;
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.04);
+    }
+
+    /* hero banner */
+    .hero-banner {
+      background: #eae3d7;
+      padding: 3.2rem 1.8rem 2.4rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 2.8rem;
+      border-left: 6px solid #b7a58b;
+    }
+
+    .hero-banner h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #3d352a;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-banner .sub {
+      font-size: 1.1rem;
+      color: #5d5344;
+      border-top: 1px solid #cfc3b2;
+      display: inline-block;
+      padding-top: 0.6rem;
+      margin-top: 0.2rem;
+    }
+
+    /* 内容排版 */
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #3d352a;
+      border-left: 5px solid #b7a58b;
+      padding-left: 1rem;
+      margin: 2.4rem 0 1rem 0;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      word-break: break-word;
+    }
+
+    /* 背景说明引用块 */
+    .context-box {
+      background: #f2ede6;
+      border-left: 6px solid #b7a58b;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      border-radius: 10px;
+      font-style: normal;
+    }
+
+    .context-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 提示框（访问提醒） */
+    .tip-card {
+      background: #fcf9f4;
+      border: 1px solid #d9cfc0;
+      border-radius: 14px;
+      padding: 1.8rem 2rem 1.6rem;
+      margin: 2.2rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .tip-card .tip-title {
+      font-weight: 600;
+      color: #5d4f3c;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px dashed #d9cfc0;
+      padding-bottom: 0.4rem;
+    }
+
+    .tip-card ul {
+      list-style: none;
+      padding-left: 0.2rem;
+    }
+
+    .tip-card ul li {
+      margin-bottom: 0.65rem;
+      padding-left: 1.4rem;
+      position: relative;
+    }
+
+    .tip-card ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #b7a58b;
+      font-weight: bold;
+    }
+
+    /* 场景/特点 列表（简约） */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.6rem;
+      margin: 1.8rem 0;
+    }
+
+    .feature-item {
+      background: #fbfaf7;
+      border: 1px solid #e2d9cd;
+      padding: 1.2rem 1.2rem 1rem;
+      border-radius: 12px;
+    }
+
+    .feature-item .num {
+      display: inline-block;
+      background: #eae3d7;
+      color: #3d352a;
+      font-weight: 500;
+      width: 1.8rem;
+      height: 1.8rem;
+      line-height: 1.8rem;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0.3rem 0 0.3rem;
+      color: #3d352a;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      color: #4d453a;
+    }
+
+    /* FAQ 摘要 */
+    .faq-mini {
+      background: #faf7f2;
+      border-radius: 14px;
+      padding: 1.6rem 2rem;
+      margin: 2.2rem 0 1.8rem;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid #e5dbcf;
+      padding-bottom: 0.4rem;
+    }
+
+    .faq-mini details:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      cursor: pointer;
+      color: #3d352a;
+      padding: 0.3rem 0;
+    }
+
+    .faq-mini details p {
+      margin: 0.5rem 0 0.4rem 1rem;
+      font-size: 0.95rem;
+      color: #4d453a;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      margin-top: 3rem;
+      padding-top: 1.6rem;
+      border-top: 2px solid #e2d9cd;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #5d5344;
+    }
+
+    .site-footer .access-line {
+      background: #f2ede6;
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      margin: 0.6rem 0 1.2rem;
+      letter-spacing: 0.3px;
+    }
+
+    a {
+      color: #8a6f4e;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    a:hover {
+      border-bottom-color: #8a6f4e;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.2rem 0.6rem;
+      }
+
+      .page-wrap {
+        padding: 1.6rem 1.2rem 2rem;
+      }
+
+      .hero-banner {
+        padding: 2rem 1rem 1.6rem;
+      }
+
+      .hero-banner h1 {
+        font-size: 2rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .tip-card,
+      .context-box,
+      .faq-mini {
+        padding: 1.2rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-banner h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- hero 横幅 -->
+  <div class="hero-banner">
+    <h1>MK体育 · 简明指南</h1>
+    <div class="sub">从背景说明到访问提醒 – 信息密度与实用兼顾</div>
+  </div>
+
+  <!-- 第一段：背景说明 -->
+  <h2>背景与定位</h2>
+  <p>
+    在体育资讯聚合与赛事参考领域，<a href="https://homezh-mk.com">MK体育</a> 长期保持一种低调而连贯的存在。平台并非追求短期流量的快资讯站，而是以相对克制的姿态提供赛事动态、训练观察以及运动文化层面的内容。其内容编排更贴近「杂志式专题」：每一期围绕特定运动或现象展开，避免碎片化轰炸，适合希望深度浏览而非快速刷新的用户。
+  </p>
+
+  <!-- 背景说明引用块 -->
+  <div class="context-box">
+    <p><strong>▪ 内容调性：</strong> 不刻意制造标题反差，也不使用夸张用语。报道与专栏以中性、专业为主，信息密度高于一般门户的资讯流。</p>
+    <p><strong>▪ 更新节奏：</strong> 非日更模式，每篇内容经过相对完整的准备，专题感强。适合在固定时段集中阅读。</p>
+  </div>
+
+  <!-- 第二段：特点与场景 (两列卡片) -->
+  <h2>特点与适用场景</h2>
+  <div class="feature-grid">
+    <div class="feature-item">
+      <div class="num">1</div>
+      <h3>专题式编排</h3>
+      <p>每期围绕特定赛事/运动展开纵深分析，而非罗列短讯。适合对单一话题有持续兴趣的读者。</p>
+    </div>
+    <div class="feature-item">
+      <div class="num">2</div>
+      <h3>视觉与阅读感</h3>
+      <p>版面注重留白与图文节奏，减少广告干扰。在电脑或平板端浏览体验更接近杂志翻页感。</p>
+    </div>
+    <div class="feature-item">
+      <div class="num">3</div>
+      <h3>非即时性优势</h3>
+      <p>由于不追求秒级更新，内容经过沉淀和编辑过滤，事实核查与行文规范相对扎实，适合作为背景参考。</p>
+    </div>
+    <div class="feature-item">
+      <div class="num">4</div>
+      <h3>低噪环境</h3>
+      <p>评论区未完全开放或保持有限互动，避免情绪化争论。适合只希望获取内容、不参与社交讨论的用户。</p>
+    </div>
+  </div>
+
+  <!-- 第三段：自然介绍 + 提示 整合 -->
+  <h2>访问提醒与使用建议</h2>
+  <p>
+    由于 <a href="https://homezh-mk.com">MK体育</a> 的页面结构偏向传统文章布局，部分交互入口并不显眼。建议首次浏览时直接查看首页「专题轮播」区域，或使用站内标签分类（如「赛事纵深」「运动文化」）进行筛选，比直接搜索关键词更为高效。
+  </p>
+
+  <!-- 提示框 (访问提醒) -->
+  <div class="tip-card">
+    <div class="tip-title">📌 访问提示</div>
+    <ul>
+      <li><strong>直接访问首页：</strong> 网站未设置强制跳转或弹窗，打开即见专题摘要。</li>
+      <li><strong>阅读顺序：</strong> 每期专题内部按「背景 → 分析 → 延伸」组织，适合顺序阅读。</li>
+      <li><strong>移动端适配：</strong> 手机浏览器可正常浏览，但横屏或平板模式能获得更好的版面呈现。</li>
+      <li><strong>外部链接：</strong> 站内引用来源通常以文末注释形式列出，不嵌入正文干扰阅读。</li>
+    </ul>
+  </div>
+
+  <!-- FAQ 摘要 (克制版本) -->
+  <div class="faq-mini">
+    <details>
+      <summary>MK体育 是否需要注册或订阅？</summary>
+      <p>目前平台内容对访客完全开放，未设置会员墙或强制登录。部分历史专题可能需要通过站内搜索查找。</p>
+    </details>
+    <details>
+      <summary>内容更新频率如何把握？</summary>
+      <p>平均每 3–5 天发布一篇专题，大型赛事期间可能增加特辑。建议每周访问 1–2 次即可覆盖主要更新。</p>
+    </details>
+    <details>
+      <summary>遇到页面显示异常怎么办？</summary>
+      <p>由于采用较传统的前端结构，极少出现兼容问题。如遇布局错乱，可尝试刷新或更换浏览器内核。</p>
+    </details>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="site-footer">
+    <div class="access-line">
+      如需浏览完整专题与最新内容，可前往 <a href="https://homezh-mk.com">MK体育</a> 首页。
+    </div>
+    <p style="margin-top: 0.8rem; font-size: 0.85rem; color: #7b7265;">
+      本页为简明介绍 · 基于公开信息整理 · 不构成任何引导或承诺
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
